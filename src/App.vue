@@ -1,9 +1,7 @@
 <template>
   <div class="app w-screen h-screen flex bg-white dark:bg-black">
     <div class="inner-wrapper m-auto">
-      <clock-nav
-        @choosedTab="openTab"
-      />
+      <clock-nav @choosedTab="openTab" />
       <keep-alive>
         <component :is="renderTab"></component>
       </keep-alive>
@@ -12,31 +10,30 @@
 </template>
 
 <script setup>
-import { ref } from "@vue/reactivity"
-import ClockNav from "./components/ClockNav.vue"
-import WatchComp from "./components/WatchComp.vue"
-import StopwatchComp from "./components/StopwatchComp.vue"
-import TimerComp from "./components/TimerComp.vue"
-import { computed } from "@vue/runtime-core"
+import { ref } from "@vue/reactivity";
+import ClockNav from "./components/ClockNav.vue";
+import WatchComp from "./components/WatchComp.vue";
+import StopwatchComp from "./components/StopwatchComp.vue";
+import TimerComp from "./components/TimerComp.vue";
+import { computed } from "@vue/runtime-core";
 
-const currentTab = ref('')
+const currentTab = ref("");
 
 const openTab = (tab) => {
-  currentTab.value = tab
-}
+  currentTab.value = tab;
+};
 
 const renderTab = computed(() => {
-  if (currentTab.value === 'Часы') {
-    return WatchComp
+  if (currentTab.value === "Часы") {
+    return WatchComp;
   }
-  if (currentTab.value === 'Секундомер') {
-    return StopwatchComp
+  if (currentTab.value === "Секундомер") {
+    return StopwatchComp;
   }
-  if (currentTab.value === 'Таймер') {
-    return TimerComp
+  if (currentTab.value === "Таймер") {
+    return TimerComp;
   }
-})
-
+});
 </script>
 
 <style>
@@ -53,5 +50,4 @@ html {
 body {
   height: 100%;
 }
-
 </style>
