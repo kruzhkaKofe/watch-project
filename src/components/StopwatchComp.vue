@@ -71,7 +71,7 @@ const start = () => {
   }
   if (ms.value > 99) {
     s.value++;
-    ms.value = 0;
+    ms.value = `0`.padStart(2, "0");
   }
 
   // Seconds
@@ -83,7 +83,7 @@ const start = () => {
   }
   if (s.value > 59) {
     m.value++;
-    s.value = 0;
+    s.value = `0`.padStart(2, "0");
   }
 
   // Minutes
@@ -95,7 +95,7 @@ const start = () => {
   }
   if (m.value > 59) {
     h.value++;
-    m.value = 0;
+    m.value = `0`.padStart(2, "0");
   }
 
   // Hours
