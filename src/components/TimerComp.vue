@@ -1,5 +1,5 @@
 <template>
-	 <div class="timer text-center text-7xl dark:text-white">
+	 <div class="timer text-center text-7xl dark:text-white h-[176px]">
     {{ timer }}
   </div>
 </template>

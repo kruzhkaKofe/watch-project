@@ -7,7 +7,8 @@ module.exports = {
   ],
   theme: {
     screens: {
-      'my700': {'max': '700px'}
+      'bp700': {'max': '700px'},
+      'bp400': {'max': '400px'},
     }
   },
   darkMode: 'class'
