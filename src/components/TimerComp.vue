@@ -47,7 +47,7 @@
 
 <script setup>
 import { ref } from "@vue/reactivity";
-import { watch } from "@vue/runtime-core";
+import { watch, watchEffect } from "@vue/runtime-core";
 import MyButton from "./MyButton.vue"
 
 const time = ref("00:00");
@@ -55,10 +55,10 @@ const state = ref('Старт');
 
 const m = ref('00');
 const s = ref('00');
-let interval;
 let timeInSec;
+let interval;
 
-const setTimeinSec = watch(() => {
+const setTimeinSec = watchEffect(() => {
   if (m.value || s.value) {
     timeInSec = parseInt(m.value) * 60 + parseInt(s.value)
   }
@@ -100,8 +100,8 @@ const counter = () => {
 }
 
 const breakeInterval = () => {
-  s.value = 0
-  m.value = 0
+  s.value = '00'
+  m.value = '00'
   time.value = '00:00'
   state.value = 'Старт'
   clearInterval(interval);
