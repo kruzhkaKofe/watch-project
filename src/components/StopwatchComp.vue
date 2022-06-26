@@ -1,6 +1,6 @@
 <template>
-  <div class="stopwatch flex flex-col items-center bp700:w-[380px] bp400:w-[280px]">
-    <div class="text-center text-7xl dark:text-white mb-[50px] px-[30px] bp700:text-5xl">
+  <div class="stopwatch flex flex-col bp700:w-[380px] bp400:w-[280px] items-center">
+    <div class="text-center text-7xl dark:text-white mb-[30px] px-[30px] h-[150px] flex items-center bp700:text-5xl">
       {{ stopwatch }}
     </div>
     <div class="stopwatch__contols w-[650px] flex justify-around items-center bp700:w-[280px] bp700:flex-col px-[30px]">
@@ -110,6 +110,7 @@ const start = () => {
     alert("Не умею считать дальше! >_<");
   }
 
+  // Result
   stopwatch.value = `${h.value}:${m.value}:${s.value}.${ms.value}`;
 };
 
