@@ -133,7 +133,7 @@ const saveLog = () => {
   if (logs.value.length < 10) {
     logs.value.push(stopwatch.value);
   } else {
-    alert("Максимальное количество кругов!");
+    alert("Максимальное количество кругов!")
   }
 };
 

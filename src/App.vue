@@ -1,7 +1,6 @@
 <template>
   <div class="app py-[15px] w-screen h-screen flex bg-white dark:bg-black">
     <div class="inner-wrapper m-auto">
-      
       <clock-nav @choosedTab="openTab" />
       <keep-alive>
         <component :is="renderTab"></component>
